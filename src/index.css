@@ -1,5 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+	/* --background: #f9fafb; */
+	background-color: #0c0d14;
+}
+.dark-theme {
+	--background: #0c0d14;
+}
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+}
+
+/* Animations */
+.hover-scale {
+	transition: all var(--transition-timing);
+}
+
+.hover-scale:hover {
+	transform: scale(var(--hover-scale)) translateY(var(--hover-translate));
+	box-shadow: var(--hover-shadow);
+}
+
+html,
+body {
+	font-family: "Inter", sans-serif;
+	scroll-behavior: smooth;
+}
+
+a {
+	color: inherit;
+	text-decoration: inherit;
+	transition: color 0.3s ease;
 }

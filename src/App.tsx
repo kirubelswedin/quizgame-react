@@ -1,16 +1,17 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from "@/components/layout";
 import HomePage from "@/pages/homePage";
+import GamePage from "@/pages/gamePage";
+import "@/styles/mediaqueries.css";
 import "@/App.css";
-import SecondPage from "@/pages/secondPage";
 
 function App() {
 	return (
 		<BrowserRouter>
-			<Layout>
+			<Layout className="main-content">
 				<Routes>
 					<Route path="/" element={<HomePage />} />
-					<Route path="/SecondPage" element={<SecondPage />} />
+					<Route path="/GamePage/:id" element={<GamePage />} />
 				</Routes>
 			</Layout>
 		</BrowserRouter>

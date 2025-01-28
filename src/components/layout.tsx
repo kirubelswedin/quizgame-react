@@ -1,18 +1,25 @@
-import { PropsWithChildren } from "react";
+import { ReactNode } from "react";
 import Header from "@/components/header";
+import Footer from "@/components/footer";
+import StarsWrapper from "./starsWrapper";
 
-const Layout = ({ children }: PropsWithChildren) => {
+interface LayoutProps {
+	children: ReactNode;
+	className?: string;
+}
+
+function LayoutContent({ children, className }: LayoutProps) {
 	return (
 		<div className="layout">
+			{/* <ThemeSwitch /> */}
+			<StarsWrapper />
 			<Header />
-			<main>{children}</main>
-			<footer>
-				<div>
-					<p>&copy; 2025 Min App. Alla rättigheter förbehållna.</p>
-				</div>
-			</footer>
+			<main className={className}>{children}</main>
+			<Footer />
 		</div>
 	);
-};
+}
 
-export default Layout;
+export default function Layout(props: LayoutProps) {
+	return <LayoutContent {...props} />;
+}

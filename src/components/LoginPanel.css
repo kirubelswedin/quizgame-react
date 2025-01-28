@@ -1,0 +1,136 @@
+.login-panel {
+	position: fixed;
+	height: calc(100% - 6.4rem);
+	top: calc(4.3rem);
+	right: -100%;
+	width: 100%;
+	max-width: 22.4rem;
+	height: calc(98vh - 4rem);
+	background-color: #1a1b28;
+	transition: right 0.3s ease-in-out;
+	box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
+	border-radius: 1rem;
+	margin-right: 0.5rem;
+	overflow-x: hidden;
+	overflow-y: overlay;
+	z-index: 10;
+}
+
+.login-panel.open {
+	right: 0;
+}
+
+.login-panel-content {
+	padding: 2rem;
+	color: white;
+}
+
+.close-button {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	background: none;
+	border: none;
+	color: white;
+	font-size: 1.5rem;
+	cursor: pointer;
+}
+
+.login-panel h2 {
+	text-align: center;
+	margin-bottom: 2rem;
+	font-size: 1.5rem;
+}
+
+.google-button,
+.facebook-button {
+	width: 100%;
+	padding: 0.75rem;
+	margin-bottom: 1rem;
+	border: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+	border-radius: 2rem;
+	cursor: pointer;
+}
+
+.google-button {
+	background-color: #fff;
+	color: #333;
+}
+.google-button:hover {
+	background-color: #e4e4e4;
+}
+
+.facebook-button {
+	background-color: #1877f2;
+	color: white;
+}
+.facebook-button:hover {
+	background-color: #2458ab;
+}
+
+.google-button img,
+.facebook-button img {
+	width: 24px;
+	height: 24px;
+}
+
+.divider {
+	text-align: center;
+	margin: 1.5rem 0;
+	position: relative;
+}
+
+.divider::before,
+.divider::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	width: 45%;
+	height: 1px;
+	background-color: #4b5563;
+}
+
+.divider::before {
+	left: 0;
+}
+
+.divider::after {
+	right: 0;
+}
+
+.divider span {
+	padding: 0 1rem;
+	color: #9ca3af;
+}
+
+input {
+	width: 100%;
+	padding: 1rem;
+	margin-bottom: 1rem;
+	border: 1px solid #4b5563;
+	border-radius: 8px;
+	background-color: #12131c;
+	outline: none;
+	color: white;
+}
+input::placeholder {
+	color: #abadbf;
+}
+
+.continue-button {
+	width: 100%;
+	padding: 1rem;
+	background-color: #6842ff;
+	color: white;
+	border: none;
+	border-radius: 2rem;
+	cursor: pointer;
+}
+
+.continue-button:hover {
+	background-color: #8668ff;
+}
