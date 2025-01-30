@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { GoogleIcon, FacebookIcon } from "@/components/icons/iconsSVG";
-import "@/components/loginPanel.css";
+import "@/components/LoginPanel.css";
 
 interface LoginPanelProps {
 	isOpen: boolean;
