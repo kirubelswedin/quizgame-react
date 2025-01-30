@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import "@/components/header.css";
 import { useState } from "react";
-import LoginPanel from "@/components/loginPanel";
+import LoginPanel from "./loginPanel";
 import { FaUserFriends } from "react-icons/fa";
 import { AiOutlineHeart } from "react-icons/ai";
 import { RiSearchLine } from "react-icons/ri";
