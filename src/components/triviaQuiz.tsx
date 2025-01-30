@@ -37,7 +37,7 @@ const TriviaQuiz = () => {
 				TOTAL_QUESTIONS,
 				Difficulty.MEDIUM
 			);
-			console.log("Fetched questions:", newQuestions);
+			// console.log("Fetched questions:", newQuestions);
 			setQuestions(newQuestions);
 		} catch (error) {
 			console.error("Failed to fetch questions:", error);
@@ -82,7 +82,7 @@ const TriviaQuiz = () => {
 		setTimerActive(false);
 		const isCorrect = answer === currentQ.correct_answer;
 		if (isCorrect) setScore(score + 1);
-		console.log(`Answer selected: ${answer}, Correct: ${isCorrect}`);
+		// console.log(`Answer selected: ${answer}, Correct: ${isCorrect}`);
 		setShowFeedback(true);
 		setReadyForNext(true);
 	};
@@ -102,7 +102,7 @@ const TriviaQuiz = () => {
 	const startTimer = () => setTimerActive(true);
 
 	const restartQuiz = async () => {
-		console.log("Restarting quiz...");
+		// console.log("Restarting quiz...");
 		initRef.current = false;
 		setLoading(true);
 
