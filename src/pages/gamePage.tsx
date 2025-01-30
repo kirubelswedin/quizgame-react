@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { gamesData } from "@/lib/games";
 import TriviaQuiz from "@/components/triviaQuiz";
 import GameTemplate from "@/components/gameTemplate";
-import LoginPanel from "../components/loginPanel";
+import LoginPanel from "@/components/loginPanel";
 import { useState } from "react";
 import "@/pages/gamePage.css";
 
