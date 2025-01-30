@@ -4,12 +4,12 @@
 	top: calc(4.3rem);
 	right: -100%;
 	width: 100%;
-	max-width: 22.4rem;
+	max-width: 24rem;
 	height: calc(98vh - 4rem);
 	background-color: #1a1b28;
 	transition: right 0.3s ease-in-out;
 	box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
-	border-radius: 1rem;
+	border-radius: 0.5rem;
 	margin-right: 0.5rem;
 	overflow-x: hidden;
 	overflow-y: overlay;
@@ -21,7 +21,7 @@
 }
 
 .login-panel-content {
-	padding: 2rem;
+	padding: 5rem 1rem 0 1rem;
 	color: white;
 }
 
@@ -39,7 +39,8 @@
 .login-panel h2 {
 	text-align: center;
 	margin-bottom: 2rem;
-	font-size: 1.5rem;
+	font-size: 1.4rem;
+	letter-spacing: 0.5px;
 }
 
 .google-button,
@@ -54,6 +55,8 @@
 	gap: 0.5rem;
 	border-radius: 2rem;
 	cursor: pointer;
+	font-size: 0.9rem;
+	font-weight: medium;
 }
 
 .google-button {
@@ -72,10 +75,10 @@
 	background-color: #2458ab;
 }
 
-.google-button img,
-.facebook-button img {
-	width: 24px;
-	height: 24px;
+.google-button svg,
+.facebook-button svg {
+	width: 1.2rem;
+	height: 1.2rem;
 }
 
 .divider {
@@ -103,8 +106,7 @@
 }
 
 .divider span {
-	padding: 0 1rem;
-	color: #9ca3af;
+	color: #ffffff;
 }
 
 input {
@@ -116,6 +118,9 @@ input {
 	background-color: #12131c;
 	outline: none;
 	color: white;
+}
+input:hover {
+	border-color: rgb(173, 173, 173);
 }
 input::placeholder {
 	color: #abadbf;
@@ -129,8 +134,10 @@ input::placeholder {
 	border: none;
 	border-radius: 2rem;
 	cursor: pointer;
+	font-size: 0.9rem;
+	font-weight: medium;
 }
 
 .continue-button:hover {
-	background-color: #8668ff;
+	background-color: #7359ff;
 }

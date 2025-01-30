@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { GoogleIcon, FacebookIcon } from "@/components/icons/iconsSVG";
 import "@/components/loginPanel.css";
 
 interface LoginPanelProps {
@@ -19,12 +20,11 @@ const LoginPanel = ({ isOpen, onClose }: LoginPanelProps) => {
 				<h2>Log in or sign up</h2>
 
 				<button className="google-button">
-					<img src="/google-icon.png" alt="Google" />
+					<GoogleIcon />
 					Continue with Google
 				</button>
-
 				<button className="facebook-button">
-					<img src="/facebook-icon.png" alt="Facebook" />
+					<FacebookIcon />
 					Continue with Facebook
 				</button>
 

@@ -7,6 +7,11 @@
 }
 @media screen and (width <= 75rem) {
 	/* nav */
+	.nav-middle {
+		max-width: 30rem;
+		width: 50%;
+		margin-right: 0rem;
+	}
 
 	/* info-section */
 	.info-section {
@@ -17,11 +22,8 @@
 		margin: 0 1rem;
 	}
 }
-@media screen and (width <= 45rem) {
+@media screen and (width <= 43.75rem) {
 	/* nav */
-	.nav {
-		/* padding: 0.3rem 0; */
-	}
 	.nav-middle {
 		display: none;
 	}
@@ -34,12 +36,16 @@
 		justify-content: start;
 	}
 
+	/* login-panel */
+	.login-panel {
+		max-width: 22.4rem;
+	}
+
 	/* info-section */
 	.info-section {
 		padding: 2rem 0;
 		font-size: small;
 	}
-	/* info-section */
 	.info-item {
 		margin: 0 1rem;
 	}

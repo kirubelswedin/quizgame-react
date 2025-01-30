@@ -7,7 +7,7 @@
 	top: 0;
 	left: 0;
 	right: 0;
-	padding: 0.5rem 1rem;
+	padding: 0.7rem 1rem;
 	z-index: 11;
 }
 
@@ -28,6 +28,7 @@
 .nav-middle {
 	max-width: 30rem;
 	width: 40%;
+	margin-right: -4.5rem;
 }
 
 .nav-right {
@@ -103,16 +104,17 @@
 }
 
 .nav-button__login {
-	background-color: #7359ff;
+	background-color: #6842ff;
 	color: white;
 	border: none;
-	padding: 0.8rem 1.5rem;
+	padding: 0.7rem 1rem;
 	border-radius: 2rem;
 	cursor: pointer;
 	transition: all 0.2s ease;
-	font-size: 1rem;
+	font-size: 0.9rem;
 	font-weight: bold;
+	letter-spacing: 0.5px;
 }
 .nav-button__login:hover {
-	background-color: #8668ff;
+	background-color: #7359ff;
 }

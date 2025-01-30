@@ -26,8 +26,8 @@
 }
 
 .games-section {
-	max-width: 1200px;
-	margin: 2rem auto;
+	max-width: 75rem;
+	margin: 0 auto;
 	padding: 0 1rem;
 }
 
@@ -37,13 +37,13 @@
 
 .games-grid {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
 	gap: 1.5rem;
 }
 
 .game-card {
-	background-color: #2a2b36;
-	border-radius: 8px;
+	/* background-color: #2a2b36; */
+	border-radius: 0.5rem;
 	overflow: hidden;
 	cursor: pointer;
 	transition: transform 0.2s;
@@ -51,21 +51,27 @@
 
 .game-card:hover {
 	transform: translateY(-4px);
-	border: #7359ff 1px solid;
+	border: #6842ff 1px solid;
+}
+
+.game-card-image {
+	width: 100%;
+	object-fit: cover;
 }
 
 .game-card img {
-	width: 100%;
-	height: 160px;
-	object-fit: cover;
+	/* width: 100%;
+	height: 60%; */
+	/* object-fit: cover; */
+	display: block;
 }
 
 .game-card h3 {
 	padding: 1rem;
-	margin: 0;
 }
 
 .game-card p {
 	padding: 0 1rem 1rem;
 	color: #a0a0a0;
+	z-index: 12;
 }
