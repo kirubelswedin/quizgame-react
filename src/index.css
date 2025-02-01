@@ -1,11 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 
 :root {
-	/* --background: #f9fafb; */
-	background-color: #0c0d14;
-}
-.dark-theme {
-	--background: #0c0d14;
+	/* --background-color: #f9fafb; */
+	--background-color: #0c0d14;
 }
 
 * {
@@ -14,18 +11,10 @@
 	box-sizing: border-box;
 }
 
-/* Animations */
-.hover-scale {
-	transition: all var(--transition-timing);
-}
-
-.hover-scale:hover {
-	transform: scale(var(--hover-scale)) translateY(var(--hover-translate));
-	box-shadow: var(--hover-shadow);
-}
-
 html,
 body {
+	background-color: var(--background-color);
+	color: var(--primary-text-color);
 	font-family: "Inter", sans-serif;
 	scroll-behavior: smooth;
 }

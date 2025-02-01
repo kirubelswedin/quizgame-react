@@ -1,10 +1,11 @@
 import { useParams } from "react-router-dom";
-import { gamesData } from "@/lib/games";
-import TriviaQuiz from "@/components/triviaQuiz";
-import GameTemplate from "@/components/gameTemplate";
+import { gamesData } from "@/lib/Data";
+import TriviaQuiz from "@/components/TriviaQuiz";
+import GameTemplate from "@/components/GameTemplate";
 import LoginPanel from "@/components/LoginPanel";
 import { useState } from "react";
-import "@/pages/gamePage.css";
+import GameImage from "@/components/GameImage";
+import "@/pages/GamePage.css";
 
 const GamePage = () => {
 	const { id } = useParams();
@@ -29,11 +30,7 @@ const GamePage = () => {
 				<>
 					{/* Preview Game */}
 					<div className="game-preview__image">
-						<img
-							src={game.image}
-							alt={game.title}
-							style={{ width: "100%", height: "auto" }}
-						/>
+						<GameImage src={game.image} alt={game.title} />
 					</div>
 					<h1>{game.title}</h1>
 					<p className="game-description">{game.description}</p>
@@ -51,11 +48,7 @@ const GamePage = () => {
 				) : (
 					<div className="game-placeholder">
 						<div className="placeholder-content">
-							<img
-								src={game.image}
-								alt={game.title}
-								style={{ width: "100%", height: "auto" }}
-							/>
+							<GameImage src={game.image} alt={game.title} />
 							<div className="placeholder-text">
 								<h2>Coming Soon!</h2>
 								<p>This game is currently in development.</p>

@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Layout from "@/components/layout";
-import HomePage from "@/pages/homePage";
-import GamePage from "@/pages/gamePage";
+import Layout from "@/components/Layout";
+import HomePage from "@/pages/HomePage";
+import GamePage from "@/pages/GamePage";
 import "@/styles/mediaqueries.css";
 import "@/App.css";
 

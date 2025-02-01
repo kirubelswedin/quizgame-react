@@ -1,10 +1,10 @@
 import { NavLink } from "react-router-dom";
-import "@/components/header.css";
 import { useState } from "react";
 import LoginPanel from "@/components/LoginPanel";
 import { FaUserFriends } from "react-icons/fa";
 import { AiOutlineHeart } from "react-icons/ai";
 import { RiSearchLine } from "react-icons/ri";
+import "@/components/Header.css";
 
 const Header = () => {
 	const [isLoginOpen, setIsLoginOpen] = useState(false);

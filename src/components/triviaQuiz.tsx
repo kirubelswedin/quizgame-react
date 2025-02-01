@@ -1,6 +1,6 @@
-import { useState, useEffect, useCallback, useRef } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { fetchQuizQuestions, Difficulty, Question } from "@/api";
-import "@/components/triviaQuiz.css";
+import "@/components/TriviaQuiz.css";
 
 const TOTAL_QUESTIONS = 10;
 
@@ -9,7 +9,7 @@ interface QuizQuestion extends Question {
 }
 
 const TriviaQuiz = () => {
-	// Group related state
+	// Group state
 	const [questions, setQuestions] = useState<QuizQuestion[]>([]);
 	const [currentQuestion, setCurrentQuestion] = useState(0);
 
@@ -24,13 +24,9 @@ const TriviaQuiz = () => {
 	const [timerActive, setTimerActive] = useState(false);
 	const [readyForNext, setReadyForNext] = useState(false);
 
-	const initRef = useRef(false); // prevent double fetch
 	const currentQ = questions[currentQuestion];
 
 	const startQuiz = useCallback(async () => {
-		if (initRef.current) return;
-		initRef.current = true;
-
 		try {
 			setLoading(true);
 			const newQuestions = await fetchQuizQuestions(
@@ -103,7 +99,6 @@ const TriviaQuiz = () => {
 
 	const restartQuiz = async () => {
 		// console.log("Restarting quiz...");
-		initRef.current = false;
 		setLoading(true);
 
 		try {

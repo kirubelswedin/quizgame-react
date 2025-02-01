@@ -18,7 +18,7 @@
 
 .game-banner {
 	background-color: #523cc4;
-	padding: 0.3rem;
+	padding: 0.4rem;
 	text-align: center;
 	color: white;
 	width: 100%;
@@ -32,7 +32,7 @@
 	background-color: white;
 	color: #7359ff;
 	border: none;
-	padding: 0.1rem 0.5rem;
+	padding: 0.2rem 0.8rem;
 	border-radius: 2rem;
 	margin-left: 0.5rem;
 	cursor: pointer;
