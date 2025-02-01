@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { fetchQuizQuestions, Difficulty, Question } from "@/api";
-import "@/components/TriviaQuiz.css";
+import "@/components/triviaQuiz.css";
 
 const TOTAL_QUESTIONS = 10;
 

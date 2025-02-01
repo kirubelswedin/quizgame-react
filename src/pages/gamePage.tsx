@@ -1,11 +1,11 @@
 import { useParams } from "react-router-dom";
 import { gamesData } from "@/lib/Data";
-import TriviaQuiz from "@/components/TriviaQuiz";
-import GameTemplate from "@/components/GameTemplate";
+import TriviaQuiz from "@/components/triviaQuiz";
+import GameTemplate from "@/components/gameTemplate";
 import LoginPanel from "@/components/LoginPanel";
 import { useState } from "react";
-import GameImage from "@/components/GameImage";
-import "@/pages/GamePage.css";
+import GameImage from "@/components/gameImage";
+import "@/pages/gamePage.css";
 
 const GamePage = () => {
 	const { id } = useParams();

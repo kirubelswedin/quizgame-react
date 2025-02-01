@@ -1,6 +1,6 @@
 import { Stars } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import "@/components/StarsWrapper.css";
+import "@/components/starsWrapper.css";
 
 export const StarsWrapper = () => {
 	return (

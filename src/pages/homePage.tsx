@@ -1,7 +1,7 @@
 import Carousel from "@/components/Carousel";
 import InfoSection from "@/components/InfoSection";
 import { gamesData } from "@/lib/Data";
-import "@/pages/HomePage.css";
+import "@/pages/homePage.css";
 
 const HomePage = () => {
 	return (

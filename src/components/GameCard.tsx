@@ -1,6 +1,6 @@
 // GameCard.tsx
 import { useNavigate } from "react-router-dom";
-import GameImage from "@/components/GameImage";
+import GameImage from "@/components/gameImage";
 import "@/components/GameCard.css";
 
 interface GameCardProps {
