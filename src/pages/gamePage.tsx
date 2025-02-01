@@ -4,7 +4,7 @@ import TriviaQuiz from "@/components/triviaQuiz";
 import GameTemplate from "@/components/gameTemplate";
 import LoginPanel from "@/components/LoginPanel";
 import { useState } from "react";
-import GameImage from "@/components/gameImage";
+import GameImage from "@/components/GameImage";
 import "@/pages/gamePage.css";
 
 const GamePage = () => {
