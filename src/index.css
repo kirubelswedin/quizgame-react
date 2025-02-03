@@ -2,7 +2,14 @@
 
 :root {
 	/* --background-color: #f9fafb; */
+	--primary-color: #7359ff;
+	--primary-hover: #8668ff;
 	--background-color: #0c0d14;
+	--border-color: #373952;
+	--correct-color: #6dff72;
+	--incorrect-color: #f44336;
+	--text-light: #ffffff;
+	--text-muted: #cccccc;
 }
 
 * {
@@ -14,7 +21,7 @@
 html,
 body {
 	background-color: var(--background-color);
-	color: var(--primary-text-color);
+	color: var(--text-light);
 	font-family: "Inter", sans-serif;
 	scroll-behavior: smooth;
 }

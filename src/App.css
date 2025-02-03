@@ -1,6 +1,6 @@
 .app {
-	background-color: var(--background);
-	color: var(--text);
+	background-color: var(--background-color);
+	color: var(--text-light);
 	min-height: 100vh;
 	position: relative;
 	isolation: isolate;

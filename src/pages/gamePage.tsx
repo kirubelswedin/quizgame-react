@@ -1,79 +1,58 @@
 import { useParams } from "react-router-dom";
-import { gamesData } from "@/lib/Data";
-import TriviaQuiz from "@/components/triviaQuiz";
-import GameTemplate from "@/components/gameTemplate";
-import LoginPanel from "@/components/LoginPanel";
-import { useState } from "react";
-import GameImage from "@/components/GameImage";
+import { useGame } from "@/context/GameContext";
+import { getGame, getGameComponent } from "@/utils/gameUtils";
+import { GameLayout } from "@/layouts/GameLayout";
+import LoginPanel from "@/components/ui/LoginPanel";
+import { useEffect, useState } from "react";
+import GamePreview from "@/components/ui/GamePreview";
 import "@/pages/gamePage.css";
 
+// Separera ut Preview-komponenten
 const GamePage = () => {
-	const { id } = useParams();
-	const game = gamesData.find((g) => g.id === Number(id));
+	const { id } = useParams<{ id: string }>();
+	const gameId = Number(id);
+	const game = getGame(gameId);
+	const GameComponent = getGameComponent(gameId);
+
 	const [isPlaying, setIsPlaying] = useState(false);
 	const [isLoginOpen, setIsLoginOpen] = useState(false);
 
+	const { setCurrentGame } = useGame();
+
+	useEffect(() => {
+		if (game) {
+			setCurrentGame(game);
+		}
+
+		return () => setCurrentGame(null);
+	}, [game, setCurrentGame]);
+
 	if (!game) {
 		return (
-			<div className="game-page">
+			<GameLayout title="Error" onLogin={() => setIsLoginOpen(true)}>
 				<div className="game-error">
 					<h2>Game Not Found</h2>
 					<p>Sorry, we couldn't find the game you're looking for.</p>
 				</div>
-			</div>
+			</GameLayout>
 		);
 	}
 
-	const renderGameContent = () => {
-		if (!isPlaying) {
-			return (
-				<>
-					{/* Preview Game */}
-					<div className="game-preview__image">
-						<GameImage src={game.image} alt={game.title} />
-					</div>
-					<h1>{game.title}</h1>
-					<p className="game-description">{game.description}</p>
-					<button className="play-now-btn" onClick={() => setIsPlaying(true)}>
-						Play Now <span>▶</span>
-					</button>
-				</>
-			);
-		}
-
-		return (
-			<div className="game-area">
-				{game.id === 1 ? (
-					<TriviaQuiz />
-				) : (
-					<div className="game-placeholder">
-						<div className="placeholder-content">
-							<GameImage src={game.image} alt={game.title} />
-							<div className="placeholder-text">
-								<h2>Coming Soon!</h2>
-								<p>This game is currently in development.</p>
-								<p>Stay tuned for updates!</p>
-							</div>
-						</div>
-					</div>
-				)}
-			</div>
-		);
-	};
-
 	return (
-		<div className="game-page">
-			<div className="game-container">
-				<GameTemplate
+		<GameLayout onLogin={() => setIsLoginOpen(true)} title={game.title}>
+			{!isPlaying ? (
+				<GamePreview
+					image={game.image}
 					title={game.title}
 					description={game.description}
-					onLoginClick={() => setIsLoginOpen(true)}
-				>
-					{renderGameContent()}
-				</GameTemplate>
-				<LoginPanel isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)} />
-			</div>
-		</div>
+					onPlay={() => setIsPlaying(true)}
+				/>
+			) : (
+				<GameComponent />
+			)}
+
+			<LoginPanel isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)} />
+		</GameLayout>
 	);
 };
 
