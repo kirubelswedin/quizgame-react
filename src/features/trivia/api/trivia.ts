@@ -20,6 +20,10 @@ export const fetchQuizQuestions = async (
       // console.log('Using token:', token);
       const categories = await getCategoryIds();
       const categoryId = categories[category] || 0;
+
+      // console.log('Selected category:', category);
+      // console.log('Category ID:', categoryId);
+
       const categoryParam = categoryId ? `&category=${categoryId}` : "";
 
       const endpoint = `${API_ENDPOINTS.QUIZ}?amount=${amount}&difficulty=${difficulty}${categoryParam}&token=${token}&type=multiple`;

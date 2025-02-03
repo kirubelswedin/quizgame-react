@@ -13,9 +13,15 @@ export const QuizSettings = ({ onStartQuiz }: QuizSettingsProps) => {
 		difficulty: Difficulty.MEDIUM,
 		category: "Any Category",
 	});
+	const [errorMessage, setErrorMessage] = useState<string>("");
 
-	const handleStartQuiz = () => {
-		onStartQuiz(settings);
+	const handleStartQuiz = async () => {
+		// console.log("Starting quiz with category:", settings.category);
+		try {
+			await onStartQuiz(settings);
+		} catch (error) {
+			setErrorMessage((error as Error).message);
+		}
 	};
 
 	return (
@@ -25,13 +31,13 @@ export const QuizSettings = ({ onStartQuiz }: QuizSettingsProps) => {
 				<div className="category-options">
 					{CATEGORIES.map((category) => (
 						<button
-							key={category}
+							key={category.api}
 							className={`option-btn ${
-								settings.category === category ? "selected" : ""
+								settings.category === category.api ? "selected" : ""
 							}`}
-							onClick={() => setSettings({ ...settings, category })}
+							onClick={() => setSettings({ ...settings, category: category.api })}
 						>
-							{category}
+							{category.display}
 						</button>
 					))}
 				</div>
@@ -73,6 +79,7 @@ export const QuizSettings = ({ onStartQuiz }: QuizSettingsProps) => {
 						))}
 					</div>
 				</div>
+				{errorMessage && <div className="error-message">{errorMessage}</div>}
 			</div>
 
 			<button className="start-quiz-btn" onClick={handleStartQuiz}>

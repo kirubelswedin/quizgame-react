@@ -19,13 +19,17 @@ const TriviaQuiz = () => {
 		handleAnswerClick,
 		handleNextQuestion,
 		startTimer,
-		restartQuiz,
 		startQuizWithSettings,
 	} = useQuiz();
 
 	const handleStartQuiz = async (settings: QuizSettingsType) => {
 		await startQuizWithSettings(settings);
 		setShowSettings(false);
+	};
+
+	// update state to show settings again
+	const handleRestart = () => {
+		setShowSettings(true);
 	};
 
 	if (showSettings) {
@@ -39,7 +43,7 @@ const TriviaQuiz = () => {
 			<QuizScore
 				score={state.score}
 				totalQuestions={questions.length}
-				onRestart={restartQuiz}
+				onRestart={handleRestart}
 			/>
 		);
 	}

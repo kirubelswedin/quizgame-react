@@ -15,8 +15,8 @@ const GamePreview = ({
 	onPlay,
 }: GamePreviewProps) => {
 	return (
-		<div className="game-preview__content">
-			<div className="game-preview__image">
+		<div className="game-preview-content">
+			<div className="game-preview-image">
 				<GameImage src={image} alt={title} />
 			</div>
 			<h1>{title}</h1>

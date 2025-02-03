@@ -2,7 +2,7 @@
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
-	max-width: 75rem;
+	max-width: 60rem;
 	margin: 0 auto;
 	padding: 1rem;
 }
@@ -37,7 +37,7 @@
 	font-weight: bold;
 }
 
-.game-footer__content {
+.game-footer-content {
 	display: flex;
 	background-color: #212233;
 	padding: 1rem;
@@ -45,7 +45,7 @@
 	align-items: center;
 }
 
-.game-footer__content h2 {
+.game-footer-content h2 {
 	font-size: 1.2rem;
 }
 

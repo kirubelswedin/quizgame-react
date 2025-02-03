@@ -1,4 +1,4 @@
-.game-preview__content {
+.game-preview-content {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -6,15 +6,16 @@
 	background-color: #0c0d14;
 }
 
-.game-preview__image {
-	width: 300px;
+.game-preview-image {
+	width: 18.75rem;
 	margin: 2rem auto;
 	border-radius: 0.5rem;
 	overflow: hidden;
 }
 
-.game-preview__image img {
+.game-preview-image {
 	width: 100%;
+	max-width: 500px;
 	height: auto;
 	object-fit: cover;
 	display: block;
@@ -28,10 +29,8 @@
 }
 
 .game-description {
-	display: flex;
-	justify-content: center;
-	background-color: transparent;
 	margin-bottom: -0.5rem;
+	text-align: center;
 }
 
 .play-now-btn {

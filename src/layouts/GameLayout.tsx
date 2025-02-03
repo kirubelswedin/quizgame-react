@@ -30,7 +30,7 @@ export const GameLayout = ({ onLogin, children, title }: GameLayoutProps) => {
 				{children}
 
 				{/* Footer */}
-				<div className="game-footer__content">
+				<div className="game-footer-content">
 					<h2>{title}</h2>
 					<div className="game-stats">
 						<div className="stats-item">
