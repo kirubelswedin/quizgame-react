@@ -37,16 +37,16 @@ export const useGame = () => {
 export const GameProvider = ({ children }: { children: ReactNode }) => {
 	const [currentGame, setCurrentGame] = useState<Game | null>(null);
 	const [gameSettings, setGameSettings] = useState<GameSettings>({});
-	// const [highscores, setHighscores] = useState<Record<number, number[]>>({});
+	const [highscores, setHighscores] = useState<Record<number, number[]>>({});
 
-	// const saveHighscore = useCallback((gameId: number, score: number) => {
-	// 	setHighscores((prev) => {
-	// 		const gameScores = [...(prev[gameId] || []), score]
-	// 			.sort((a, b) => b - a)
-	// 			.slice(0, 10);
-	// 		return { ...prev, [gameId]: gameScores };
-	// 	});
-	// }, []);
+	const saveHighscore = useCallback((gameId: number, score: number) => {
+		setHighscores((prev) => {
+			const gameScores = [...(prev[gameId] || []), score]
+				.sort((a, b) => b - a)
+				.slice(0, 10);
+			return { ...prev, [gameId]: gameScores };
+		});
+	}, []);
 
 	const resetGame = useCallback(() => {
 		setCurrentGame(null);
@@ -58,10 +58,10 @@ export const GameProvider = ({ children }: { children: ReactNode }) => {
 			value={{
 				currentGame,
 				gameSettings,
-				// highscores,
+				highscores,
 				setCurrentGame,
 				setGameSettings,
-				// saveHighscore,
+				saveHighscore,
 				resetGame,
 			}}
 		>
