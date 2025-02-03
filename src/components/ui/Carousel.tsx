@@ -1,7 +1,7 @@
 // Carousel.tsx
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
-import GameCard from "@/components/ui/GameCard";
-import { Game } from "@/types/game";
+import GameCard from "@/features/games/components/GameCard";
+import { Game } from "@/features/games/config/GameRegistry";
 import "@/components/ui/Carousel.css";
 
 type ScrollDirection = "left" | "right";

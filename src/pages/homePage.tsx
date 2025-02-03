@@ -1,6 +1,6 @@
 import Carousel from "@/components/ui/Carousel";
 import InfoSection from "@/components/ui/InfoSection";
-import { getAllGames } from "@/utils/gameUtils";
+import { getAllGames } from "@/features/games/utils/gameUtils";
 import "@/pages/homePage.css";
 
 const HomePage = () => {

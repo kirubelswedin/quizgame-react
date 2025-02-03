@@ -1,10 +1,10 @@
 import { useParams } from "react-router-dom";
-import { useGame } from "@/context/GameContext";
-import { getGame, getGameComponent } from "@/utils/gameUtils";
+import { useGame } from "@/features/games/context/GameContext";
+import { getGame, getGameComponent } from "@/features/games/utils/gameUtils";
 import { GameLayout } from "@/layouts/GameLayout";
 import LoginPanel from "@/components/ui/LoginPanel";
 import { useEffect, useState } from "react";
-import GamePreview from "@/components/ui/GamePreview";
+import GamePreview from "@/features/games/components/GamePreview";
 import "@/pages/gamePage.css";
 
 // Separera ut Preview-komponenten

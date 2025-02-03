@@ -4,7 +4,7 @@ import HomePage from "@/pages/homePage";
 import GamePage from "@/pages/gamePage";
 import "@/styles/mediaqueries.css";
 import "@/App.css";
-import { GameProvider } from "./context/GameContext";
+import { GameProvider } from "./features/games/context/GameContext";
 
 function App() {
 	return (

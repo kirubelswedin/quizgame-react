@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
-import Header from "@/components/ui/header";
-import Footer from "@/components/ui/footer";
-import StarsWrapper from "@/components/ui/starsWrapper";
+import Header from "@/layouts/header";
+import Footer from "@/layouts/footer";
+import StarsWrapper from "@/layouts/starsWrapper";
 
 interface LayoutProps {
 	children: ReactNode;

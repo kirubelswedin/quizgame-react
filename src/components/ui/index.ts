@@ -1,9 +1,5 @@
 export * from './Carousel';  
-export * from './footer';
-export * from './GameCard';
-export * from './GameImage';
-export * from './GamePreview';
-export * from './header';
+export * from './ComingSoon';  
 export * from './InfoSection';
 export * from './LoginPanel';
-export * from './starsWrapper';
+
