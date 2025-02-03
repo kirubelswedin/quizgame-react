@@ -4,7 +4,7 @@ import LoginPanel from "@/components/ui/LoginPanel";
 import { FaUserFriends } from "react-icons/fa";
 import { AiOutlineHeart } from "react-icons/ai";
 import { RiSearchLine } from "react-icons/ri";
-import "@/components/ui/Header.css";
+import "@/components/ui/header.css";
 
 const Header = () => {
 	const [isLoginOpen, setIsLoginOpen] = useState(false);
