@@ -1,7 +1,7 @@
 import { API_ENDPOINTS } from "@/api/trivia/config";
 import { Question, QuestionsState, Difficulty } from "@/types/trivia/quiz";
 import { shuffleArray } from "@/components/triviaQuiz/utils/utils";
-import { CATEGORY_IDS } from "@/api/trivia/categories";
+import { getCategoryIds } from "@/api/trivia/categories";
 import { getToken } from "@/api/trivia/token";
 
 export const fetchQuizQuestions = async (
@@ -16,12 +16,13 @@ export const fetchQuizQuestions = async (
     try {
       const token = await getToken();
       // console.log('Using token:', token);
-      const categoryId = CATEGORY_IDS[category] || 0;
+      const categories = await getCategoryIds();
+      const categoryId = categories[category] || 0;
       const categoryParam = categoryId ? `&category=${categoryId}` : "";
+
       const endpoint = `${API_ENDPOINTS.QUIZ}?amount=${amount}&difficulty=${difficulty}${categoryParam}&token=${token}&type=multiple`;
       
       const response = await fetch(endpoint);
-      
       if (response.status === 429 && retryCount < MAX_RETRIES) {
         await new Promise(resolve => setTimeout(resolve, RETRY_DELAY));
         return fetchWithRetry(retryCount + 1);
