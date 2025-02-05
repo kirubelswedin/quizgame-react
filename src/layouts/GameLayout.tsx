@@ -15,33 +15,35 @@ interface GameLayoutProps {
 export const GameLayout = ({ onLogin, children, title }: GameLayoutProps) => {
 	return (
 		<div className="game-layout">
-			{/* Banner */}
-			<div className="login-banner">
-				<p>
-					Don't lose your progress!{" "}
-					<button className="login-btn" onClick={onLogin}>
-						Log in now
-					</button>
-				</p>
-			</div>
+			<div className="game-content">
+				{/* Banner */}
+				<div className="login-banner">
+					<p>
+						Don't lose your progress!{" "}
+						<button className="login-btn" onClick={onLogin}>
+							Log in now
+						</button>
+					</p>
+				</div>
 
-			{/* Game Content */}
-			{children}
+				{/* Game Content */}
+				{children}
 
-			{/* Footer */}
-			<div className="game-footer-content">
-				<h2>{title}</h2>
-				<div className="game-stats">
-					<div className="stats-item">
-						<RiThumbUpLine className="stats-icon" size={24} />
-						<span>131K</span>
-					</div>
-					<div className="stats-item">
-						<RiThumbDownLine className="stats-icon" size={24} />
-						<span>35K</span>
-					</div>
-					<div className="stats-item">
-						<AiOutlineHeart className="stats-icon" size={24} />
+				{/* Footer */}
+				<div className="game-footer-content">
+					<h2>{title}</h2>
+					<div className="game-stats">
+						<div className="stats-item">
+							<RiThumbUpLine className="stats-icon" size={24} />
+							<span>131K</span>
+						</div>
+						<div className="stats-item">
+							<RiThumbDownLine className="stats-icon" size={24} />
+							<span>35K</span>
+						</div>
+						<div className="stats-item">
+							<AiOutlineHeart className="stats-icon" size={24} />
+						</div>
 					</div>
 				</div>
 			</div>
