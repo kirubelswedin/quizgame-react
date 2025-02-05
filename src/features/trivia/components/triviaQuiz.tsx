@@ -20,6 +20,10 @@ const TriviaQuiz = () => {
 		handleNextQuestion,
 		startTimer,
 		startQuizWithSettings,
+		showHighScoreModal,
+		handleHighScoreSubmit,
+		totalTime,
+		currentSettings,
 	} = useQuiz();
 
 	const handleStartQuiz = async (settings: QuizSettingsType) => {
@@ -44,6 +48,16 @@ const TriviaQuiz = () => {
 				score={state.score}
 				totalQuestions={questions.length}
 				onRestart={handleRestart}
+				category={currentSettings.category}
+				difficulty={currentSettings.difficulty}
+				totalTime={totalTime}
+				showHighScoreModal={showHighScoreModal}
+				onHighScoreSubmit={(name) => {
+					handleHighScoreSubmit(name); // QuizScore handles the display of HighScoreList
+				}}
+				onHighScoreSkip={() => {
+					handleHighScoreSubmit("");
+				}}
 			/>
 		);
 	}

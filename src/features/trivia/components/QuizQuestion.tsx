@@ -15,7 +15,7 @@ export const QuizQuestion = ({
 		<h2 dangerouslySetInnerHTML={{ __html: question }}></h2>
 		{!timerActive && !showFeedback && (
 			<button className="start-timer-btn" onClick={onStartTimer}>
-				Play Now
+				Let's Go!
 			</button>
 		)}
 		{readyForNext && (

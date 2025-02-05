@@ -8,7 +8,7 @@ export const useQuizFetch = (setQuestions: SetQuestions, setLoading: SetLoading)
   return useCallback(async (settings: QuizSettingsType) => {
     try {
       setLoading(true);
-      const newQuestions = await fetchQuizQuestions(settings.numberOfQuestions, settings.difficulty, settings.category);
+      const newQuestions = await fetchQuizQuestions(settings.totalQuestions, settings.difficulty, settings.category);
       setQuestions(newQuestions);
     } catch (error) {
       console.error("Failed to fetch questions:", error);

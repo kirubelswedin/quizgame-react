@@ -1,0 +1,92 @@
+.highscore-list {
+	background-color: #1a1b26;
+	border-radius: 1rem;
+	padding: 0.5rem;
+	margin: 1rem 0;
+}
+
+.highscore-list h3 {
+	font-size: 1.5rem;
+	margin: 1rem 0;
+}
+
+.game-info {
+	display: flex;
+	justify-content: center;
+	gap: 1.5rem;
+	color: #888;
+	margin-bottom: 1rem;
+}
+
+/* for scrollbar */
+.score-table {
+	width: 100%;
+	max-height: 20rem;
+	overflow-y: auto;
+	padding-right: 0.4rem;
+}
+
+.score-header {
+	display: grid;
+	grid-template-columns: 0.2fr 1.5fr 1.5fr 1.5fr 1fr 1fr 0.5fr;
+	background-color: #2a2b36;
+	padding: 0.8rem;
+	font-weight: bold;
+	text-align: center;
+	position: sticky;
+	top: 0;
+	border-radius: 0.5rem;
+}
+
+.score-row {
+	display: grid;
+	grid-template-columns: 0.2fr 1.5fr 1.5fr 1.5fr 1fr 1fr 0.5fr;
+	padding: 0.8rem;
+	text-align: center;
+	border-bottom: 1px solid #2a2b36;
+}
+
+.score-row:last-child {
+	border-bottom: none;
+}
+
+.score-info-mobile {
+	display: none;
+}
+
+.desktop-only {
+	display: block;
+}
+
+.questions {
+	text-align: center;
+}
+
+.rank {
+	color: #7359ff;
+	font-weight: bold;
+}
+
+.time {
+	/* color: #888; */
+}
+
+.no-scores {
+	text-align: center;
+	padding: 1rem;
+}
+
+/* Scrollbar styling */
+.score-table::-webkit-scrollbar {
+	width: 4px;
+}
+
+.score-table::-webkit-scrollbar-track {
+	background: #15161d;
+	border-radius: 2px;
+}
+
+.score-table::-webkit-scrollbar-thumb {
+	background: #7359ff;
+	border-radius: 2px;
+}

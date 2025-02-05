@@ -40,7 +40,7 @@ export type Category = typeof CATEGORIES[number];
 export const TIMER_DURATION = 10;
 
 export const DEFAULT_SETTINGS: QuizSettingsType = {
- numberOfQuestions: 10,
+ totalQuestions: 10,
  difficulty: Difficulty.MEDIUM,
  category: "Any Category"
 } as const;

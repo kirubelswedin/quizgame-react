@@ -24,7 +24,6 @@
 	.scroll-button.left:hover,
 	.scroll-button.right:hover {
 		opacity: 1;
-		/* background-color: rgb(0, 0, 0, 0.5); */
 	}
 }
 @media screen and (width <= 75rem) {
@@ -138,14 +137,70 @@
 	.settings-section h3 {
 		font-size: 0.86rem;
 	}
+
+	/* HighScoreModal */
+	/* .highscore-modal h2 {
+		font-size: 1.5rem;
+	} */
+
+	/* HighScoreList */
+	.score-info-mobile {
+		display: block;
+		text-align: center;
+		margin-bottom: 1.5rem;
+	}
+
+	.score-info-mobile h3 {
+		font-size: 2rem;
+		margin-bottom: 1rem;
+	}
+
+	.game-info {
+		display: flex;
+		flex-direction: row;
+		gap: 1.5rem;
+		color: #888;
+	}
+
+	.highlight {
+		color: #7359ff;
+	}
+
+	.desktop-only {
+		display: none;
+	}
+
+	.score-header {
+		grid-template-columns: 0.5fr 2fr 1.5fr 1.5fr;
+	}
+
+	.score-row {
+		grid-template-columns: 0.5fr 2fr 1.5fr 1.5fr;
+	}
 }
 
-@media screen and (width <= 31.25rem) {
+@media screen and (width <= 500px) {
 	/* carousel */
 	.scroll-button {
 		display: none;
 	}
 	.games-scroll-container {
 		scroll-snap-type: x mandatory;
+	}
+
+	/* highscore-modal */
+	.score-display {
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+	.highscore-modal h2 {
+		font-size: 1.5rem;
+	}
+	.final-score {
+		font-size: 1.5rem;
+	}
+
+	.input-section input {
+		padding: 0.6rem;
 	}
 }

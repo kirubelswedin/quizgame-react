@@ -9,7 +9,7 @@ import "@/features/trivia/components/QuizSettings.css";
 
 export const QuizSettings = ({ onStartQuiz }: QuizSettingsProps) => {
 	const [settings, setSettings] = useState<QuizSettingsType>({
-		numberOfQuestions: 10,
+		totalQuestions: 10,
 		difficulty: Difficulty.MEDIUM,
 		category: "Any Category",
 	});
@@ -51,9 +51,9 @@ export const QuizSettings = ({ onStartQuiz }: QuizSettingsProps) => {
 							<button
 								key={number}
 								className={`option-btn ${
-									settings.numberOfQuestions === number ? "selected" : ""
+									settings.totalQuestions === number ? "selected" : ""
 								}`}
-								onClick={() => setSettings({ ...settings, numberOfQuestions: number })}
+								onClick={() => setSettings({ ...settings, totalQuestions: number })}
 							>
 								{number}
 							</button>

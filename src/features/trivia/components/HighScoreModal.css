@@ -1,0 +1,98 @@
+.modal-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.7);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 100;
+}
+
+.highscore-modal {
+	background-color: #1a1b26;
+	padding: 2rem;
+	border-radius: 1rem;
+	max-width: 30rem;
+	width: 90%;
+	text-align: center;
+}
+
+.highscore-modal h2 {
+	color: white;
+	font-size: 2rem;
+	margin-bottom: 0.5rem;
+}
+
+.score-display {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	gap: 1rem;
+	align-items: center;
+	margin-bottom: 0.5rem;
+}
+
+.final-score {
+	font-size: 1.8rem;
+	color: #7359ff;
+	font-weight: bold;
+}
+
+.score-percentage,
+.total-time {
+	color: #888;
+	font-size: 1.2rem;
+}
+
+.input-section {
+	/* margin-bottom: 0.5rem; */
+}
+
+/* input */
+.input-section input {
+	width: 100%;
+	padding: 0.8rem;
+	background-color: #2a2b36;
+	font-size: 1rem;
+}
+.input-section input:focus {
+	outline: none;
+}
+
+/* buttons */
+.submit-btn {
+	background-color: #7359ff;
+	color: white;
+	padding: 0.6rem 1.2rem;
+}
+
+.submit-btn:disabled {
+	background-color: #4a4a4a;
+	cursor: not-allowed;
+}
+
+.cancel-btn {
+	color: #7359ff;
+	background-color: white;
+	padding: 0.6rem 1.4rem;
+}
+
+.modal-buttons {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	gap: 1rem;
+}
+.modal-buttons button {
+	border: none;
+	border-radius: 2rem;
+	font-size: 1.2rem;
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+.modal-buttons button:hover:not(:disabled) {
+	transform: scale(1.05);
+}
