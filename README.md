@@ -28,7 +28,7 @@ Experience ReactGames here: [awesomereactgames.netlify.app](https://awesomereact
 
 - Modern, responsive interface
 - Seamless cross-device experience
-- Clean and intuitive navigation
+- Clean and intuitive navigation..
 - Consistent gaming experience
 
 ## 🛠️ Technical Stack

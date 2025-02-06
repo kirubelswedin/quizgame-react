@@ -7,7 +7,6 @@ import { useEffect, useState } from "react";
 import GamePreview from "@/features/games/components/GamePreview";
 import "@/pages/gamePage.css";
 
-// Separera ut Preview-komponenten
 const GamePage = () => {
 	const { id } = useParams<{ id: string }>();
 	const gameId = Number(id);
